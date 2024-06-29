@@ -1,12 +1,6 @@
-import React, { memo, useEffect } from "react";
-import lyRequest from "../../services";
+import React, { memo } from "react";
 
 const Home = memo(() => {
-	useEffect(() => {
-		lyRequest.get({ url: "/home/highscore" }).then(res => {
-			console.log(res);
-		});
-	}, []);
 	return <div>Home</div>;
 });
 
