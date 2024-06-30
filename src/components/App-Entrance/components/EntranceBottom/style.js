@@ -22,6 +22,14 @@ const EntranceBottomWarpper = styled.div`
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
+
+		input {
+			width: 100%;
+			height: 100%;
+			outline: none;
+			border: 1px solid #222;
+			padding-left: 10px;
+		}
 	}
 
 	.confirm {

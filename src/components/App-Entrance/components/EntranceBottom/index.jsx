@@ -7,8 +7,22 @@ const EntranceBottom = memo(() => {
 		<EntranceBottomWarpper>
 			<h2 className="greetings">爱彼迎欢迎您</h2>
 			<div className="info">
-				<div className="nation frame"></div>
-				<div className="phone frame"></div>
+				<div className="nation frame">
+					<input
+						type="text"
+						name="nation"
+						id="nation"
+						placeholder="账号"
+					/>
+				</div>
+				<div className="phone frame">
+					<input
+						type="password"
+						name="frame"
+						id="frame"
+						placeholder="密码"
+					/>
+				</div>
 			</div>
 			<p className="phrase">
 				我们会致电或发送短信，以确认您的电话号码。
