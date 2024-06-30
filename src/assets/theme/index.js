@@ -15,6 +15,10 @@ const theme = {
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 		}`,
 	},
+
+	borderColor: {
+		primary: "#eee",
+	},
 };
 
 export default theme;

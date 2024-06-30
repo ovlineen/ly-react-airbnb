@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CenterWrapper = styled.div`
 	display: flex;
-	width: 300px;
+	width: 330px;
 	height: 48px;
 	border: 1px solid #eee;
 	justify-content: space-between;
