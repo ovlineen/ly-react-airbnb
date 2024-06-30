@@ -11,43 +11,77 @@ const HeaderRight = memo(() => {
 
 	// 副作用代码
 	useEffect(() => {
-		function windowHandleClick() {
+		function windowHandleClick(e) {
+			// 如果点击的地方是面板或者其子元素，则不关闭面板
+			if (e.target.closest(".profile, .panel")) {
+				return;
+			}
 			setShowPanel(false);
 		}
 
-		window.addEventListener("click", windowHandleClick, true);
+		// 使用冒泡阶段监听事件
+		window.addEventListener("click", windowHandleClick);
 
 		return () => {
 			window.removeEventListener("click", windowHandleClick);
 		};
 	}, []);
 
-	function btnClickHandle(name) {
-		name(true);
+	// 点击按钮时设置相应的状态
+	function btnClickHandle(setStateFunction, e) {
+		e.stopPropagation(); // 阻止事件冒泡
+		setStateFunction(true);
+		setShowPanel(false);
+	}
+
+	function profileClickHandle(e) {
+		e.stopPropagation(); // 阻止事件冒泡
+		setShowPanel(true);
 	}
 
 	return (
 		<RightWrapper>
 			<div className="more">
-				<div className="register text">注册</div>
-				<div className="login text">登录</div>
+				<div
+					className="register text"
+					onClick={e => btnClickHandle(setShowEntrance, e)}
+				>
+					注册
+				</div>
+				<div
+					className="login text"
+					onClick={e => btnClickHandle(setShowEntrance, e)}
+				>
+					登录
+				</div>
 				<div className="text">
-					<IconEarth></IconEarth>
+					<IconEarth />
 				</div>
 			</div>
 
-			<div
-				className="profile"
-				onClick={e => btnClickHandle(setShowPanel)}
-			>
-				<IconDetails></IconDetails>
-				<IconUser></IconUser>
+			<div className="profile" onClick={profileClickHandle}>
+				<IconDetails />
+				<IconUser />
 
 				{showPanel && (
-					<div className="panel">
+					<div className="panel" onClick={e => e.stopPropagation()}>
 						<div className="top">
-							<div className="text">注册</div>
-							<div className="text">登录</div>
+							<div
+								className="text"
+								onClick={e =>
+									btnClickHandle(setShowEntrance, e)
+								}
+							>
+								注册
+							</div>
+							<div
+								className="text"
+								onClick={e =>
+									btnClickHandle(setShowEntrance, e)
+								}
+							>
+								登录
+							</div>
 						</div>
 						<div className="bottom">
 							<div className="text">帮助中心</div>
@@ -56,7 +90,7 @@ const HeaderRight = memo(() => {
 				)}
 			</div>
 
-			<AppEntrance></AppEntrance>
+			{showEntrance && <AppEntrance entrance={setShowEntrance} />}
 		</RightWrapper>
 	);
 });

@@ -21,7 +21,13 @@ const EntranceBottom = memo(() => {
 				我确认已年满 18
 				周岁，且已认真阅读并同意爱彼迎的服务条款、支付服务条款、非歧视政策和隐私政策。如您居住在中国，您的信息将在中国按照中国法律（包括隐私和信息披露法律）的要求处理。
 			</div>
-			<div className="confirm"></div>
+			<div className="frame confirm">登录或注册</div>
+			<div className="segmentation">或</div>
+			<div className="other">
+				<div className="frame">使用微信登录</div>
+				<div className="frame">使用Apple登录</div>
+				<div className="frame">使用邮箱登录</div>
+			</div>
 		</EntranceBottomWarpper>
 	);
 });

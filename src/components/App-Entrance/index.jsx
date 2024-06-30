@@ -3,10 +3,10 @@ import EntarceWrapper from "./style";
 import EntranceTop from "./components/EntranceTop";
 import EntranceBottom from "./components/EntranceBottom";
 
-const AppEntrance = memo(() => {
+const AppEntrance = memo(props => {
 	return (
 		<EntarceWrapper>
-			<EntranceTop></EntranceTop>
+			<EntranceTop entrance={props.entrance}></EntranceTop>
 			<EntranceBottom></EntranceBottom>
 		</EntarceWrapper>
 	);

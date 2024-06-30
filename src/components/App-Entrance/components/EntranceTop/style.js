@@ -5,7 +5,8 @@ const EntarceTopWarpper = styled.div`
 	background-color: #fff;
 	color: ${props => props.theme.textColor.primary};
 	width: 568px;
-	border-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	display: flex;
 	align-items: center;
 	padding: 0 20px;
