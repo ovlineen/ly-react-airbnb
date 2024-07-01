@@ -5,6 +5,7 @@ const HeaderWarpper = styled.div`
 	.title {
 		font-size: 18px;
 		margin-bottom: 18px;
+		font-weight: 700;
 	}
 	.subtilte {
 		font-size: 14px;

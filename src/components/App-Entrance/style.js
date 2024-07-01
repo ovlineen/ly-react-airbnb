@@ -11,6 +11,7 @@ const EntarceWrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 222;
 `;
 
 export default EntarceWrapper;

@@ -4,10 +4,12 @@ import RoomWarpper from "./style";
 import { Rating } from "@mui/material";
 
 const RoomItem = memo(props => {
-	const { itemData } = props;
+	const { itemData, itemWidth = "25%", itemHeight = "150px" } = props;
 	return (
 		<RoomWarpper
 			data-verifycolor={itemData?.verify_info?.text_color || "#eee"}
+			$itemWidth={itemWidth}
+			$itemHeight={itemHeight}
 		>
 			<div className="item">
 				<div className="cover">
