@@ -3,6 +3,7 @@ import React, { memo } from "react";
 import SectionV1Warpper from "./style";
 import SectionHeader from "@/components/section-header";
 import SectionRooms from "@/components/section-rooms";
+import SectionFooter from "@/components/section-footer";
 
 const HomeSectionV1 = memo(props => {
 	const { infoData } = props;
@@ -10,6 +11,7 @@ const HomeSectionV1 = memo(props => {
 		<SectionV1Warpper>
 			<SectionHeader title={infoData.title}></SectionHeader>
 			<SectionRooms roomList={infoData.list}></SectionRooms>
+			<SectionFooter></SectionFooter>
 		</SectionV1Warpper>
 	);
 });

@@ -4,6 +4,7 @@ import SectionWarpperV2 from "./style";
 import SectionHeader from "@/components/section-header";
 import SectionRooms from "@/components/section-rooms";
 import SectionTabs from "@/components/section-tabs";
+import SectionFooter from "@/components/section-footer";
 
 const HomeSectionV2 = memo(props => {
 	const { infoData } = props;
@@ -32,6 +33,7 @@ const HomeSectionV2 = memo(props => {
 				itemWidth={"33.33%"}
 				itemHeight={"200px"}
 			></SectionRooms>
+			<SectionFooter name={name} color={"#008a8a"}></SectionFooter>
 		</SectionWarpperV2>
 	);
 });

@@ -4,6 +4,7 @@ const TabsWarpper = styled.div`
 	display: flex;
 	margin: 20px 0;
 	font-size: 14px;
+
 	.tab {
 		margin-right: 10px;
 		padding: 8px 20px;

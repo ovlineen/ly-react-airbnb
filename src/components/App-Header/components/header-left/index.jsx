@@ -5,7 +5,9 @@ import IconLogon from "@/assets/svg/icon_logon";
 const HeaderLeft = memo(() => {
 	return (
 		<LeftWrapper>
-			<IconLogon></IconLogon>
+			<a href="./home">
+				<IconLogon></IconLogon>
+			</a>
 		</LeftWrapper>
 	);
 });

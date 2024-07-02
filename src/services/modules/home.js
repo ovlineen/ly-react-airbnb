@@ -20,6 +20,18 @@ export function getHomeDiscountData() {
 
 export function getHotrecommendData() {
 	return lyRequest.get({
-		url:"/home/hotrecommenddest"
-	})
+		url: "/home/hotrecommenddest",
+	});
+}
+
+export function getLongforData() {
+	return lyRequest.get({
+		url: "/home/longfor",
+	});
+}
+
+export function getHomeplusData() {
+	return lyRequest.get({
+		url: "/home/plus",
+	});
 }
