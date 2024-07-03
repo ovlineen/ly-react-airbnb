@@ -10,6 +10,9 @@ a {
   color: #484848;
   text-decoration: none;
 }
+a:hover {
+  color: #008a8a !important;
+}
 img {
   vertical-align: middle;
 }

@@ -7,7 +7,7 @@ const RoomItem = memo(props => {
 	const { itemData, itemWidth = "25%", itemHeight = "150px" } = props;
 	return (
 		<RoomWarpper
-			data-verifycolor={itemData?.verify_info?.text_color || "#eee"}
+			$verifycolor={itemData?.verify_info?.text_color || "#eee"}
 			$itemWidth={itemWidth}
 			$itemHeight={itemHeight}
 		>

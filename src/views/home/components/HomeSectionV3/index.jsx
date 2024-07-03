@@ -19,7 +19,7 @@ const HomeSectionV3 = memo(props => {
 					<RoomItem
 						itemData={item}
 						key={item.id}
-						itemWidth={"200px"}
+						itemWidth={"250px"}
 					></RoomItem>
 				))}
 			</ScrollView>
