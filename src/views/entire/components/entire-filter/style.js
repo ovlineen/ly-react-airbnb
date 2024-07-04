@@ -6,7 +6,7 @@ const FilterWapper = styled.div`
 
 	.filter {
 		display: flex;
-		margin-left: 20px;
+		margin-left: 30px;
 		margin-bottom: 10px;
 
 		.filterItem {
@@ -19,7 +19,7 @@ const FilterWapper = styled.div`
 			user-select: none;
 			cursor: pointer;
 		}
-        
+
 		.filterActive {
 			color: #fff;
 			background-color: ${props => props.theme.color.secondary};

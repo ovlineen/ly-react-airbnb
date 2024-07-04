@@ -22,6 +22,7 @@ const EntranceBottomWarpper = styled.div`
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
+		user-select: none;
 
 		input {
 			width: 100%;

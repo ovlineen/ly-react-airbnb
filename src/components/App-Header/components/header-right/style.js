@@ -43,6 +43,8 @@ export const RightWrapper = styled.div`
 			padding: 5px 0;
 			width: 240px;
 			background-color: #fff;
+			z-index: 222;
+			user-select: none;
 			border-radius: 10px;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 			font-size: 14px;

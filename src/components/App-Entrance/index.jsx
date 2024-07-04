@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef } from "react";
+import React, { memo, useEffect } from "react";
 import EntarceWrapper from "./style";
 import EntranceTop from "./components/EntranceTop";
 import EntranceBottom from "./components/EntranceBottom";
@@ -18,7 +18,7 @@ const AppEntrance = memo(props => {
 		return () => {
 			window.removeEventListener("click", closureEntrance);
 		};
-	}, []);
+	}, [props]);
 
 	return (
 		<EntarceWrapper>

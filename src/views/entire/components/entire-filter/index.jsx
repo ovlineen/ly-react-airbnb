@@ -11,7 +11,7 @@ const EntireFilter = memo(props => {
 		const newItem = [...selectItem];
 
 		if (newItem.includes(item)) {
-			const index = newItem.findIndex(filterItem => filterItem == item);
+			const index = newItem.findIndex(filterItem => filterItem === item);
 			newItem.splice(index, 1);
 		} else {
 			newItem.push(item);
