@@ -13,15 +13,11 @@ const Indicator = memo(props => {
 		const itemLeft = selectItemEl.offsetLeft;
 		// 获取元素宽度
 		const itemWidth = selectItemEl.clientWidth;
-
-		// console.log(itemLeft, itemWidth);
-
 		// 获取父元素宽度
 		const contentWidth = contentRef.current.clientWidth;
 		const contentScroll = contentRef.current.scrollWidth;
 
 		let distance = itemLeft + itemWidth * 0.5 - contentWidth * 0.5;
-		console.log(distance);
 		contentRef.current.style.transform = `translateX(${-distance}px)`;
 
 		if (distance < 0) distance = 0;

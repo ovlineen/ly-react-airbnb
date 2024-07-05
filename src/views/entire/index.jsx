@@ -17,6 +17,7 @@ const Entire = memo(() => {
 	);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
 		dispatch(fetchEntireDataAction());
 	}, [dispatch]);
 
@@ -27,8 +28,7 @@ const Entire = memo(() => {
 				itemData={entireData?.list}
 				totalCount={entireData.totalCount}
 			></EntireRooms>
-			<EntirePagination
-			></EntirePagination>
+			<EntirePagination></EntirePagination>
 		</EntireWapper>
 	);
 });

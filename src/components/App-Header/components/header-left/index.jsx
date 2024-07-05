@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const HeaderLeft = memo(() => {
 	const navigate = useNavigate();
 	function onLogoClickHandle() {
-		navigate("/home");
+		navigate("./home");
 	}
 
 	return (
